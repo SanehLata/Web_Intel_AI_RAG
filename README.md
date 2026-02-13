@@ -5,7 +5,7 @@ Web Intel AI RAG is an AI-powered Web Intelligence Retrieval-Augmented Generatio
 ## 🚀 Features
 
 #### 🌐 Web Content Ingestion
-  Scrapes and processes web pages using BeautifulSoup.
+  Scrapes and processes web pages using BeautifulSoup and langchain's Document Loader(WebBaseLoader) and Text Splitters.
       
 ####  📚 Semantic Search with Vector Database
 Stores embeddings in ChromaDB for fast similarity search.
@@ -23,7 +23,7 @@ Interactive UI for querying and exploring results.
 
 ## 🏗 Tech Stack
 
-LangChain 1.2.x
+LangChain 1.2.10
 ChromaDB
 Sentence Transformers
 HuggingFace Hub
