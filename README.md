@@ -24,12 +24,19 @@ Interactive UI for querying and exploring results.
 ## 🏗 Tech Stack
 
 LangChain 1.2.10
+
 ChromaDB
+
 Sentence Transformers
+
 HuggingFace Hub
+
 Groq LLM
+
 Streamlit
+
 BeautifulSoup4
+
 Python-dotenv
 
 
