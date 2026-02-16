@@ -44,12 +44,19 @@ if query:
         st.header("Answer:")
         st.write(answer)
 
-        # Extract unique sources only
-        if docs:
-            unique_sources = list({doc.metadata.get("source", "No source") for doc in docs})
-            st.subheader("Sources:")
-            for source in unique_sources:
-                st.write(source)
+        # Extract unique sources only — show ONLY if answer is not "I don't know"
+        if docs and answer.strip().lower() != "i don't know":
+
+            unique_sources = list({
+                doc.metadata.get("source", "No source")
+                for doc in docs
+                if doc.metadata.get("source")
+            })
+
+            if unique_sources:
+                st.subheader("Sources:")
+                for source in unique_sources:
+                    st.write(source)
 
     except RuntimeError as e:
         placeholder.text("You must process urls first")
