@@ -188,7 +188,7 @@ Streamlit UI
 3. AI-powered Q&A over custom web sources
 
 4. Prototype for production RAG systems
-   ## ⚙️ Production RAG Framework
+   ###  Production RAG Framework
 
 ![RAGFramework](docs/Basic_RAG_Framework.png)
 
