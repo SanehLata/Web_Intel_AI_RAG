@@ -44,6 +44,8 @@ Python-dotenv
 
 ## ⚙️ How It Works
 
+![Web_UI](docs/Web_UI.jpg)
+
 1. A user provides a URL or content source.
 
 2. The system extracts and cleans the content.
