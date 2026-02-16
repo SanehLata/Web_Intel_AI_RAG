@@ -133,6 +133,16 @@ Answer:
 
     answer = response.content.strip()
 
+    normalized_answer = answer.lower()
+
+    # If LLM doesn't know, return empty sources
+    if (
+            "i don't know" in normalized_answer or
+            "i do not know" in normalized_answer or
+            "not in the context" in normalized_answer
+    ):
+        return answer, []
+
     return answer, docs
 
 if __name__ == "__main__":
@@ -145,7 +155,8 @@ if __name__ == "__main__":
         print(msg)
 
     answer, sources = generate_answer(
-        "How much direct investments are family offices making in January 2026?"
+        "who is stephen"
+        # "How much direct investments are family offices making in January 2026?"
     )
     print(f"\nAnswer: {answer}\n")
     print("Sources:")
